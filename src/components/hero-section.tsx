@@ -1,0 +1,247 @@
+"use client";
+
+import Image from "next/image";
+import { FormEvent, useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Phone, Star } from "lucide-react";
+import clsx from "clsx";
+
+type Stat = { label: string; value: string };
+type LeadFormData = { name: string; email: string; phone: string };
+
+type FlooringHeroProps = {
+  headline?: string;
+  subheadline?: string;
+  primaryCtaLabel?: string;
+  secondaryCtaLabel?: string;
+  ctaHidden?: boolean;
+  onPrimaryClick?: () => void;
+  onSecondaryClick?: () => void;
+  stats?: Stat[];
+  desktopSrc?: string;
+  mobileSrc?: string;
+  backgroundAlt?: string;
+  phoneNumber?: string;
+  formHeadline?: string;
+  formSubheadline?: string;
+  onLeadSubmit?: (data: LeadFormData) => void;
+  className?: string;
+};
+
+export const FlooringHero = ({
+  headline = "Premium Flooring Solutions Perfectly Installed",
+  subheadline = "Transform your space with designer finishes, precise installation, and trust with every step.",
+  primaryCtaLabel = "Call Now",
+  secondaryCtaLabel = "See Recent Projects",
+  onPrimaryClick,
+  onSecondaryClick,
+  stats = [
+    { label: "Projects Completed", value: "1,200+" },
+    { label: "Avg. Project Rating", value: "4.9/5" },
+    { label: "Years in The Business", value: "15" },
+  ],
+  ctaHidden = false,
+  desktopSrc = "/images/shirt-logo.webp",
+  mobileSrc = "/images/featured-img.webp",
+  backgroundAlt = "Luxury flooring installation in progress",
+  phoneNumber = "0417 696 602",
+  formHeadline = "Get My Flooring Quote",
+  formSubheadline = "Share your info and we’ll confirm a site visit within 24 hours.",
+  onLeadSubmit,
+  className,
+}: FlooringHeroProps) => {
+  const [formData, setFormData] = useState<LeadFormData>({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    onLeadSubmit?.(formData);
+    setTimeout(() => setIsSubmitting(false), 400);
+  };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    handleResize(); // initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <section
+      className={clsx(
+        "relative overflow-hidden bg-slate-950 text-white",
+        className
+      )}
+    >
+      <div className="absolute inset-0">
+        <Image
+          src={isMobile ? mobileSrc : desktopSrc}
+          alt={backgroundAlt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_20%] md:object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-[#050505]/90 opacity-80" />
+      </div>
+
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 pt-20 pb-20 lg:flex-row lg:items-center lg:gap-20 lg:px-10 lg:py-44">
+        {/* LEFT COLUMN */}
+
+        <div className="flex-1 space-y-8">
+          <div className="space-y-5">
+            <h1 className="text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
+              {headline.split(" ").map((word, index) =>
+                word === "Flooring" || word === "Solutions" ? (
+                  <span key={index} className="text-amber-400">
+                    {word}{" "}
+                  </span>
+                ) : (
+                  <span key={index}>{word} </span>
+                )
+              )}
+            </h1>
+            <p className="max-w-2xl text-lg text-slate-200">{subheadline}</p>
+          </div>
+
+          {!ctaHidden && (
+            <div className="flex flex-wrap gap-3">
+              <Button
+                size="lg"
+                className="bg-amber-400 text-slate-950 hover:bg-amber-300"
+                onClick={onPrimaryClick}
+              >
+                {primaryCtaLabel}
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white/40 bg-transparent text-white hover:border-white"
+                onClick={onSecondaryClick}
+              >
+                {secondaryCtaLabel}
+              </Button>
+            </div>
+          )}
+
+          <div className="grid gap-6 pt-6 scale-[0.9] sm:scale-none grid-cols-3">
+            {stats.map(({ label, value }) => (
+              <div key={label}>
+                <p className="text-3xl font-semibold text-white">{value}</p>
+                <p className="text-xs uppercase tracking-wide text-slate-400">
+                  {label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3 rounded-2xl bg-white/5 p-4 backdrop-blur">
+            <div className="flex items-center text-amber-300">
+              {Array.from({ length: 5 }).map((_, idx) => (
+                <Star
+                  key={idx}
+                  className="h-4 w-4 fill-amber-300 text-amber-300"
+                />
+              ))}
+            </div>
+            <div className="text-sm text-slate-200">
+              Trusted by 300+ builders & designers across the metro area.
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT COLUMN FORM */}
+        <div className="relative flex-1 rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
+          <div className="space-y-6">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-slate-300">
+                Contact Us Now
+              </p>
+              <p className="text-2xl font-semibold text-white">
+                Schedule within 7 days
+              </p>
+              <p className="mt-2 text-sm text-slate-300">{formSubheadline}</p>
+            </div>
+
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="space-y-2">
+                <Label htmlFor="lead-name" className="text-slate-200">
+                  Full name
+                </Label>
+                <Input
+                  id="lead-name"
+                  placeholder="John Smith"
+                  className="bg-slate-950/50 text-white placeholder:text-slate-500"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData((prev) => ({ ...prev, name: e.target.value }))
+                  }
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="lead-email" className="text-slate-200">
+                  Email
+                </Label>
+                <Input
+                  id="lead-email"
+                  type="email"
+                  placeholder="your@email.com"
+                  className="bg-slate-950/50 text-white placeholder:text-slate-500"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData((prev) => ({ ...prev, email: e.target.value }))
+                  }
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="lead-phone" className="text-slate-200">
+                  Phone number
+                </Label>
+                <Input
+                  id="lead-phone"
+                  type="tel"
+                  placeholder="0424 420 715"
+                  className="bg-slate-950/50 text-white placeholder:text-slate-500"
+                  value={formData.phone}
+                  onChange={(e) =>
+                    setFormData((prev) => ({ ...prev, phone: e.target.value }))
+                  }
+                  required
+                />
+              </div>
+
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full bg-amber-400 text-slate-950 hover:bg-amber-300"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : formHeadline}
+              </Button>
+            </form>
+
+            <div className="flex justify-center rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">
+              <a
+                href={`tel:${phoneNumber.replace(/[^+\d]/g, "")}`}
+                className="mt-1 flex items-center gap-2 text-lg font-semibold text-white hover:underline"
+              >
+                <Phone className="h-5 w-5 text-amber-300" />
+                {phoneNumber}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
