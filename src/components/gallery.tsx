@@ -4,6 +4,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { Badge } from "@/components/ui/badge";
+import { StringToBoolean } from "class-variance-authority/types";
 
 type FlooringType = {
   name: string;
@@ -16,70 +17,23 @@ type FlooringType = {
 type FlooringGalleryProps = {
   heading?: string;
   subheading?: string;
-  items?: FlooringType[];
+  items: FlooringType[];
   className?: string;
   backgroundImage?: string;
   backgroundAlt?: string;
+  base: string;
+  secondary: string;
 };
-
-const defaultItems: FlooringType[] = [
-  {
-    name: "Engineered Hardwood",
-    subtitle: "White Oak · Chevron · Matte Finish",
-    description:
-      "Sustainably sourced planks with precision-milled tongues for seamless installs.",
-    image: "/images/flooring-types/hybrid-flooring.JPG",
-    imageAlt: "Engineered hardwood flooring in modern living room",
-  },
-  {
-    name: "Luxury Vinyl Plank (LVP)",
-    subtitle: "Waterproof · Pet-friendly",
-    description:
-      "High-definition textures and aluminum-oxide wear layers for busy households.",
-    image: "/images/flooring-types/cross-ref.JPG",
-    imageAlt: "Luxury vinyl plank flooring kitchen",
-  },
-  {
-    name: "Large-Format Tile",
-    subtitle: "Porcelain · Oversized slabs",
-    description:
-      "Laser-leveled substrates and feather-finish skim coats keep grout lines crisp.",
-    image: "/images/flooring-types/herringbone.JPG",
-    imageAlt: "Large-format tile bathroom floor",
-  },
-  {
-    name: "Herringbone & Inlays",
-    subtitle: "Custom patterns · Border details",
-    description:
-      "We template every cut to deliver perfect reveals on premium layouts.",
-    image: "/images/flooring-types/laminate.JPG",
-    imageAlt: "Herringbone flooring detail",
-  },
-  {
-    name: "Stairs & Transitions",
-    subtitle: "Nosing · Wrapped treads",
-    description:
-      "Seamless transitions between rooms and staircases with color-matched trims.",
-    image: "/images/flooring-types/simple.JPG",
-    imageAlt: "Wood stairs matching flooring",
-  },
-  {
-    name: "Commercial Spec Flooring",
-    subtitle: "Retail · Offices · Hospitality",
-    description:
-      "Durable finishes engineered for ADA compliance, high traffic, and easy maintenance.",
-    image: "/images/flooring-types/staircase-flooring.JPG",
-    imageAlt: "Commercial flooring in retail space",
-  },
-];
 
 export function FlooringGallery({
   heading = "Flooring styles we install",
   subheading = "From engineered hardwood to large-format tile, our crews deliver showroom finishes with job-site precision.",
-  items = defaultItems,
+  items,
   className,
   backgroundImage = "/images/herringbone-bg.png",
   backgroundAlt = "Decorative wood texture background",
+  base,
+  secondary,
 }: FlooringGalleryProps) {
   return (
     <section
@@ -103,7 +57,9 @@ export function FlooringGallery({
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6">
         <div className="space-y-3 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">
+          <div
+            className={`inline-flex items-center gap-2 rounded-full border border-primary bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-light-primary`}
+          >
             <span>Selection</span>
           </div>
           <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
@@ -116,7 +72,7 @@ export function FlooringGallery({
           {items.map(({ name, subtitle, description, image, imageAlt }) => (
             <article
               key={name}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-slate-950 bg-slate-950 shadow-[0_20px_50px_rgba(15,23,42,0.08)] transition hover:-translate-y-1"
+              className={`group flex flex-col overflow-hidden rounded-3xl border border-slate-950 bg-slate-950 shadow-[0_20px_50px_rgba(15,23,42,0.08)] transition hover:-translate-y-1`}
             >
               <div className="relative h-56 overflow-hidden">
                 <Image
@@ -127,14 +83,16 @@ export function FlooringGallery({
                   className="object-cover transition duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent" />
-                <Badge className="absolute left-4 top-4 rounded-full bg-amber-400 text-slate-950 backdrop-blur">
+                <Badge
+                  className={`absolute left-4 top-4 rounded-full bg-primary text-slate-950 backdrop-blur`}
+                >
                   {name}
                 </Badge>
               </div>
 
               <div className="flex flex-1 flex-col gap-3 px-5 py-6">
                 {subtitle && (
-                  <p className="text-sm font-semibold text-amber-500">
+                  <p className={`text-sm font-semibold text-dark-primary-500`}>
                     {subtitle}
                   </p>
                 )}

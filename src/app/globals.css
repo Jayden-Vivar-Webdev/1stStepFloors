@@ -82,7 +82,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.13 0.04 264 / 1);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -121,5 +121,59 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    @apply bg-amber-400; /* default Tailwind color you want */
+  }
+  .bg-secondary-dark {
+    @apply bg-slate-950;
+  }
+  .text-primary {
+    @apply text-amber-400;
+  }
+  .text-light-primary {
+    @apply text-amber-300;
+  }
+  .text-dark-primary {
+    @apply text-amber-600;
+  }
+  .text-dark-primary-500 {
+    @apply text-amber-500;
+  }
+  .text-secondary {
+    @apply text-slate-950;
+  }
+  .bg-primary:hover {
+    @apply bg-amber-300;
+  }
+  .review-light {
+    @apply border-amber-200 bg-amber-50 text-amber-700;
+  }
+  .review-dark {
+    @apply border-white/10 text-amber-300;
+  }
+  .border-primary {
+    @apply border-amber-300/30;
+  }
+  .item-fill {
+    @apply fill-amber-300;
+  }
+  .pill-border {
+    @apply border-amber-300/30;
+  }
+  .card-top-border {
+    @apply absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500 via-amber-500 to-amber-500;
+  }
+  .process-card-icon {
+    @apply bg-amber-400/20 text-amber-500 ring-1 ring-amber-200 transition group-hover:bg-amber-500 group-hover:text-white;
+  }
+  .focus-primary {
+    @apply focus:ring-amber-400;
+  }
+  .focus-visable-primary {
+    @apply focus-visible:ring-amber-400;
   }
 }

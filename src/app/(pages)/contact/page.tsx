@@ -1,17 +1,16 @@
+"use client";
 import { ContactSection } from "@/components/contact-section";
 import { FlooringHero } from "@/components/hero-section";
+import content from "@/content/content.json";
 
 export default function ContactPage() {
+  const { theme, pages } = content;
   return (
     <>
-      <FlooringHero
-        ctaHidden={true}
-        headline="Contact Us"
-        subheadline="Get in touch with us to discuss your flooring needs."
-        primaryCtaLabel="Call Now"
-        secondaryCtaLabel="See Recent Projects"
-        desktopSrc="/images/flooring-types/herringbone.JPG"
-        mobileSrc="/images/flooring-types/herringbone.JPG"
+      <ContactSection
+        {...pages.home["contact-section"]}
+        base={theme.baseColor}
+        secondary={theme.secondary}
       />
     </>
   );

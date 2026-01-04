@@ -12,45 +12,46 @@ type Stat = { label: string; value: string };
 type LeadFormData = { name: string; email: string; phone: string };
 
 type FlooringHeroProps = {
-  headline?: string;
+  headline: string;
   subheadline?: string;
   primaryCtaLabel?: string;
   secondaryCtaLabel?: string;
   ctaHidden?: boolean;
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
-  stats?: Stat[];
-  desktopSrc?: string;
-  mobileSrc?: string;
-  backgroundAlt?: string;
-  phoneNumber?: string;
-  formHeadline?: string;
-  formSubheadline?: string;
+  stats: Stat[];
+  desktopSrc: string;
+  mobileSrc: string;
+  backgroundAlt: string;
+  phoneNumber: string;
+  formHeadline: string;
+  formSubheadline: string;
   onLeadSubmit?: (data: LeadFormData) => void;
   className?: string;
+  primary: string;
+  secondary: string;
+  base: string;
 };
 
 export const FlooringHero = ({
-  headline = "Premium Flooring Solutions Perfectly Installed",
-  subheadline = "Transform your space with designer finishes, precise installation, and trust with every step.",
+  headline,
+  subheadline,
   primaryCtaLabel = "Call Now",
-  secondaryCtaLabel = "See Recent Projects",
+  secondaryCtaLabel,
   onPrimaryClick,
   onSecondaryClick,
-  stats = [
-    { label: "Projects Completed", value: "1,200+" },
-    { label: "Avg. Project Rating", value: "4.9/5" },
-    { label: "Years in The Business", value: "15" },
-  ],
+  stats,
   ctaHidden = false,
-  desktopSrc = "/images/shirt-logo.webp",
-  mobileSrc = "/images/featured-img.webp",
-  backgroundAlt = "Luxury flooring installation in progress",
-  phoneNumber = "0417 696 602",
-  formHeadline = "Get My Flooring Quote",
-  formSubheadline = "Share your info and we’ll confirm a site visit within 24 hours.",
+  desktopSrc,
+  mobileSrc,
+  backgroundAlt,
+  phoneNumber,
+  formHeadline,
+  formSubheadline,
   onLeadSubmit,
   className,
+  primary,
+  base,
 }: FlooringHeroProps) => {
   const [formData, setFormData] = useState<LeadFormData>({
     name: "",
@@ -101,7 +102,7 @@ export const FlooringHero = ({
             <h1 className="text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
               {headline.split(" ").map((word, index) =>
                 word === "Flooring" || word === "Solutions" ? (
-                  <span key={index} className="text-amber-400">
+                  <span key={index} className={`text-primary`}>
                     {word}{" "}
                   </span>
                 ) : (
@@ -116,7 +117,7 @@ export const FlooringHero = ({
             <div className="flex flex-wrap gap-3">
               <Button
                 size="lg"
-                className="bg-amber-400 text-slate-950 hover:bg-amber-300"
+                className={`bg-primary text-slate-950 bg-primary:hover cursor-pointer`}
                 onClick={onPrimaryClick}
               >
                 {primaryCtaLabel}
@@ -124,7 +125,7 @@ export const FlooringHero = ({
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/40 bg-transparent text-white hover:border-white"
+                className="border-white/40 bg-transparent text-white hover:border-white cursor-pointer"
                 onClick={onSecondaryClick}
               >
                 {secondaryCtaLabel}
@@ -144,12 +145,9 @@ export const FlooringHero = ({
           </div>
 
           <div className="flex items-center gap-3 rounded-2xl bg-white/5 p-4 backdrop-blur">
-            <div className="flex items-center text-amber-300">
+            <div className={`flex items-center text-light-primary`}>
               {Array.from({ length: 5 }).map((_, idx) => (
-                <Star
-                  key={idx}
-                  className="h-4 w-4 fill-amber-300 text-amber-300"
-                />
+                <Star key={idx} className={`h-4 w-4 `} />
               ))}
             </div>
             <div className="text-sm text-slate-200">
@@ -223,7 +221,7 @@ export const FlooringHero = ({
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-amber-400 text-slate-950 hover:bg-amber-300"
+                className={`w-full bg-primary text-slate-950 bg-primary:hover cursor-pointer`}
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : formHeadline}
@@ -235,7 +233,7 @@ export const FlooringHero = ({
                 href={`tel:${phoneNumber.replace(/[^+\d]/g, "")}`}
                 className="mt-1 flex items-center gap-2 text-lg font-semibold text-white hover:underline"
               >
-                <Phone className="h-5 w-5 text-amber-300" />
+                <Phone className={`h-5 w-5 text-light-primary`} />
                 {phoneNumber}
               </a>
             </div>

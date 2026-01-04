@@ -1,0 +1,304 @@
+{
+  "theme": {
+    "primary-color": "amber-400",
+    "baseColor": "amber",
+    "secondary": "slate-950",
+    "background": "light",
+    "mode": "dark"
+  },
+  "footer": {
+    "brand": {
+      "name": "1st Step Flooring",
+      "description": "Building delightful experiences with modern design systems, thoughtful engineering, and scalable architecture.",
+      "logoHref": "/"
+    },
+    "socials": [
+      { "icon": "Facebook", "href": "https://twitter.com/yourhandle" },
+      { "icon": "Instagram", "href": "https://github.com/yourhandle" }
+    ],
+    "sections": [
+      {
+        "title": "Services",
+        "links": [
+          { "label": "Hybrid Timber Flooring", "href": "#" },
+          { "label": "Herringbone", "href": "#" },
+          { "label": "Laminate Flooring", "href": "#" }
+        ]
+      },
+      {
+        "title": "Pages",
+        "links": [
+          { "label": "Home", "href": "/" },
+          { "label": "Services", "href": "#" },
+          { "label": "Contact", "href": "#" }
+        ]
+      },
+      {
+        "title": "Operating Hours",
+        "links": [
+          { "label": "Monday-Friday: 8am - 4pm" },
+          { "label": "Saturday: 10am - 3pm" },
+          { "label": "Sunday: Closed" }
+        ]
+      }
+    ],
+    "bottomLinks": [
+      { "label": "Privacy", "href": "#" },
+      { "label": "Terms", "href": "#" }
+    ]
+  },
+  "pages": {
+    "home": {
+      "hero-home": {
+        "headline": "Premium Flooring Solutions Perfectly Installed",
+        "subheadline": "Transform your space with designer finishes, precise installation, and trust with every step.",
+        "primaryCtaLabel": "Call Now",
+        "secondaryCtaLabel": "See Recent Projects",
+        "ctaHidden": false,
+        "stats": [
+          { "label": "Projects Completed", "value": "1,200+" },
+          { "label": "Avg. Project Rating", "value": "4.9/5" },
+          { "label": "Years in The Business", "value": "15" }
+        ],
+        "desktopSrc": "/images/shirt-logo.webp",
+        "mobileSrc": "/images/featured-img.webp",
+        "backgroundAlt": "Luxury flooring installation in progress",
+        "phoneNumber": "1300 176 262",
+        "formHeadline": "Get My Flooring Quote",
+        "formSubheadline": "Share your info and we’ll confirm a site visit within 24 hours."
+      },
+      "review-data": {
+        "heading": "Facebook reviews from real clients",
+        "subheading": "Dust-free installs, on-time schedules, and premium finishes—straight from homeowners, designers, and GC partners.",
+        "reviews": [
+          {
+            "name": "Ahmad Reda",
+            "role": "Homeowner · 5/5 ★ on Facebook",
+            "content": "Antonio was professional and completed the flooring job on time and to a very high standard. Would definitely use 1st Step Floors again.",
+            "profileImage": "/images/reviews/ahmed-review.webp",
+            "rating": 5
+          },
+          {
+            "name": "Julie Kane",
+            "role": "Homeowner · 5/5 ★ on Facebook",
+            "content": "Antonio did a fantastic job on our new floor. He was very reliable, friendly, professional and very reasonably priced. We highly recommend 1st Step Floors to everyone.",
+            "profileImage": "/images/reviews/julie-review.webp",
+            "rating": 5
+          },
+          {
+            "name": "Linda Langford",
+            "role": "Homeowner · 5/5 ★ on Facebook",
+            "content": "Absolutely love our new floor. Antonio was very professional and prompt. Nothing was too difficult. Definitely give Antonio a call if you’re looking for new flooring you won’t be disappointed.",
+            "profileImage": "/images/reviews/linda-review.webp",
+            "rating": 5
+          }
+        ],
+        "ctaLabel": "Read more on Facebook",
+        "ctaHref": "https://facebook.com",
+        "variant": "light"
+      },
+      "benefits-section": {
+        "bgImage": "/images/flooring-types/herringbone.JPG",
+        "bgAlt": "Premium flooring installation with high-end finishes",
+        "badgeText": "Why Choose Us",
+        "title": ["Premium", "Benefits"],
+        "pointsTitle": "Experience the Difference",
+        "points": [
+          "Dust-free installation",
+          "On-time project schedules",
+          "High-quality materials and finishes",
+          "Professional and friendly team",
+          "Satisfaction guaranteed"
+        ],
+        "statsTitle": "Our Track Record",
+        "stats": [
+          { "title": "Projects Completed", "stat": "1,200+" },
+          { "title": "Avg. Project Rating", "stat": "4.9/5" },
+          { "title": "Years in Business", "stat": "15" },
+          { "title": "Trusted Builders & Designers", "stat": "300+" }
+        ]
+      },
+      "how-it-works": {
+        "badgeText": "Process",
+        "headline": "How our flooring installation works",
+        "subheadline": "A transparent four-step workflow built to minimize downtime and keep every detail on schedule.",
+        "steps": [
+          {
+            "title": "Book your estimate",
+            "desc": "Tell us about your space and ideal timeline. We’ll confirm a site visit within 24 hours.",
+            "icon": "ClipboardCheck"
+          },
+          {
+            "title": "On-site measurements",
+            "desc": "Our specialists inspect subfloors, measure precisely, and flag any prep work needed.",
+            "icon": "Ruler"
+          },
+          {
+            "title": "Select materials",
+            "desc": "Choose from curated hardwood, LVP, tile, or laminate samples tailored to your lifestyle.",
+            "icon": "Layers"
+          },
+          {
+            "title": "Expert installation",
+            "desc": "Certified installers complete the job dust-free, on schedule, and walk you through care tips.",
+            "icon": "Hammer"
+          }
+        ],
+        "ctaLabel": "Book a free estimate",
+        "ctaHref": "#estimate-form",
+        "theme": {
+          "primary": "amber-400",
+          "secondary": "slate-950",
+          "base": "amber"
+        }
+      },
+      "flooring-gallery": {
+        "heading": "Flooring styles we install",
+        "subheading": "From engineered hardwood to large-format tile, our crews deliver showroom finishes with job-site precision.",
+        "backgroundImage": "/images/herringbone-bg.png",
+        "backgroundAlt": "Decorative wood texture background",
+        "items": [
+          {
+            "name": "Engineered Hardwood",
+            "subtitle": "White Oak · Chevron · Matte Finish",
+            "description": "Sustainably sourced planks with precision-milled tongues for seamless installs.",
+            "image": "/images/flooring-types/hybrid-flooring.JPG",
+            "imageAlt": "Engineered hardwood flooring in modern living room"
+          },
+          {
+            "name": "Luxury Vinyl Plank (LVP)",
+            "subtitle": "Waterproof · Pet-friendly",
+            "description": "High-definition textures and aluminum-oxide wear layers for busy households.",
+            "image": "/images/flooring-types/cross-ref.JPG",
+            "imageAlt": "Luxury vinyl plank flooring kitchen"
+          },
+          {
+            "name": "Large-Format Tile",
+            "subtitle": "Porcelain · Oversized slabs",
+            "description": "Laser-leveled substrates and feather-finish skim coats keep grout lines crisp.",
+            "image": "/images/flooring-types/herringbone.JPG",
+            "imageAlt": "Large-format tile bathroom floor"
+          },
+          {
+            "name": "Herringbone & Inlays",
+            "subtitle": "Custom patterns · Border details",
+            "description": "We template every cut to deliver perfect reveals on premium layouts.",
+            "image": "/images/flooring-types/laminate.JPG",
+            "imageAlt": "Herringbone flooring detail"
+          },
+          {
+            "name": "Stairs & Transitions",
+            "subtitle": "Nosing · Wrapped treads",
+            "description": "Seamless transitions between rooms and staircases with color-matched trims.",
+            "image": "/images/flooring-types/simple.JPG",
+            "imageAlt": "Wood stairs matching flooring"
+          },
+          {
+            "name": "Commercial Spec Flooring",
+            "subtitle": "Retail · Offices · Hospitality",
+            "description": "Durable finishes engineered for ADA compliance, high traffic, and easy maintenance.",
+            "image": "/images/flooring-types/staircase-flooring.JPG",
+            "imageAlt": "Commercial flooring in retail space"
+          }
+        ]
+      },
+      "contact-section": {
+        "headline": "Premium Flooring Solutions Perfectly Installed",
+        "subheadline": "Transform your space with designer finishes, precise installation, and trust with every step.",
+        "primaryCtaLabel": "Call Now",
+        "secondaryCtaLabel": "See Recent Projects",
+        "ctaHidden": true,
+        "desktopSrc": "/images/flooring-types/herringbone.JPG",
+        "mobileSrc": "/images/flooring-types/herringbone.JPG",
+        "backgroundAlt": "Luxury flooring installation in progress",
+        "phoneNumber": "1300 176 262",
+        "formHeadline": "Get My Flooring Quote",
+        "formSubheadline": "Share your info and we’ll confirm a site visit within 24 hours.",
+        "stats": [
+          {
+            "label": "Trusted by builders & designers",
+            "value": "300+"
+          }
+        ]
+      }
+    },
+    "services": {
+      "hero": {
+        "image": "/images/flooring-types/hybrid-flooring.JPG",
+        "alt": "Flooring",
+        "eyebrow": "Trusted local tradies",
+        "headline": "Reliable trades & maintenance done right",
+        "description": "From urgent call-outs to scheduled upkeep, we deliver quality workmanship, transparent pricing, and friendly service.",
+        "primaryCta": {
+          "label": "Book a site visit",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Call 1300 123 456",
+          "href": "tel:1300123456"
+        }
+      },
+      "servicesSection": {
+        "title": "Our Services",
+        "subtitle": "Flexible services for residential, commercial, and industrial jobs.",
+        "services": [
+          {
+            "title": "Emergency repairs",
+            "summary": "24/7 response for electrical, plumbing, and structural issues.",
+            "features": [
+              "Rapid dispatch",
+              "Licensed experts",
+              "Upfront pricing"
+            ],
+            "ctaLabel": "Request emergency help",
+            "image": "/images/flooring-types/cross-ref.JPG",
+            "imageAlt": "Technician performing an emergency flooring repair"
+          },
+          {
+            "title": "Scheduled maintenance",
+            "summary": "Preventive checks that keep your assets safe and compliant.",
+            "features": [
+              "Custom maintenance plans",
+              "Detailed reporting",
+              "Flexible hours"
+            ],
+            "ctaLabel": "Plan maintenance",
+            "image": "/images/flooring-types/laminate.JPG",
+            "imageAlt": "Team handling scheduled flooring maintenance"
+          },
+          {
+            "title": "Installations & upgrades",
+            "summary": "Modern upgrades for residential, commercial, and industrial sites.",
+            "features": [
+              "Full project management",
+              "Quality materials",
+              "Safety assured"
+            ],
+            "ctaLabel": "Start a project",
+            "image": "/images/flooring-types/hybrid-flooring.JPG",
+            "imageAlt": "New flooring installation and upgrade"
+          }
+        ]
+      },
+      "processStepsSection": {
+        "steps": [
+          {
+            "step": "01",
+            "title": "Obligation-free quote",
+            "description": "Share your job details, photos, or plans for a same-day estimate."
+          },
+          {
+            "step": "02",
+            "title": "On-site assessment",
+            "description": "We inspect, confirm scope, and finalise timeline before starting."
+          },
+          {
+            "step": "03",
+            "title": "Workmanship guarantee",
+            "description": "Certified tradies complete the job with full clean-up and warranty."
+          }
+        ]
+      }
+    }
+  }
+}

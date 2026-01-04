@@ -17,48 +17,25 @@ type Review = {
 type FacebookReviewsProps = {
   heading?: string;
   subheading?: string;
-  reviews?: Review[];
+  reviews: Review[];
   ctaLabel?: string;
   ctaHref?: string;
   className?: string;
-  variant?: "dark" | "light";
+  variant?: "dark" | "light" | string;
+  base: string;
+  secondary: string;
 };
 
-const defaultReviews: Review[] = [
-  {
-    name: "Ahmad Reda",
-    role: "Homeowner · 5/5 ★ on Facebook",
-    content:
-      "Antonio was professional and completed the flooring job on time and to a very high standard. Would definitely use 1st Step Floors again.",
-    profileImage: "/images/reviews/ahmed-review.webp",
-    rating: 5,
-  },
-  {
-    name: "Julie Kane",
-    role: "Homeowner · 5/5 ★ on Facebook",
-    content:
-      "Antonio did a fantastic job on our new floor. He was very reliable, friendly, professional and very reasonably priced. We highly recommend 1st Step Floors to everyone.",
-    profileImage: "/images/reviews/julie-review.webp",
-    rating: 5,
-  },
-  {
-    name: "Linda Langford",
-    role: "Homeowner · 5/5 ★ on Facebook",
-    content:
-      "Absolutely love our new floor. Antonio was very professional and prompt. Nothing was too difficult. Definitely give Antonio a call if you’re looking for new flooring you won’t be disappointed..",
-    profileImage: "/images/reviews/linda-review.webp",
-    rating: 5,
-  },
-];
-
-export const FacebookReviews = ({
-  heading = "Facebook reviews from real clients",
-  subheading = "Dust-free installs, on-time schedules, and premium finishes—straight from homeowners, designers, and GC partners.",
-  reviews = defaultReviews,
-  ctaLabel = "Read more on Facebook",
-  ctaHref = "https://facebook.com",
+export const Reviews = ({
+  heading,
+  subheading,
+  reviews,
+  ctaLabel,
+  ctaHref,
   className,
   variant = "dark",
+  base,
+  secondary,
 }: FacebookReviewsProps) => {
   const isDark = variant === "dark";
 
@@ -66,7 +43,7 @@ export const FacebookReviews = ({
     <section
       className={clsx(
         "py-20 lg:py-30",
-        isDark ? "bg-slate-950 text-white" : "bg-white text-slate-900",
+        isDark ? `bg-secondary-dark text-white` : `text-slate-900`,
         className
       )}
     >
@@ -75,15 +52,13 @@ export const FacebookReviews = ({
           <div
             className={clsx(
               "mx-auto inline-flex items-center gap-2 rounded-full border px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em]",
-              isDark
-                ? "border-white/10 text-amber-300"
-                : "border-amber-200 bg-amber-50 text-amber-700"
+              isDark ? `.review-dark` : `review-light`
             )}
           >
             <Facebook
               className={clsx(
                 "h-4 w-4",
-                isDark ? "text-amber-300" : "text-amber-600"
+                isDark ? `text-light-primary` : `text-dark-primary`
               )}
             />
             <span>Facebook Reviews</span>
@@ -139,7 +114,7 @@ export const FacebookReviews = ({
                       className={clsx(
                         "font-semibold",
                         isDark
-                          ? "bg-slate-800 text-amber-300"
+                          ? `bg-slate-800 text-light-primary`
                           : "bg-slate-100 text-slate-700"
                       )}
                     >
@@ -173,14 +148,16 @@ export const FacebookReviews = ({
                   </div>
                 </div>
 
-                <div className="mb-4 flex items-center gap-1 text-amber-300">
+                <div
+                  className={`mb-4 flex items-center gap-1 text-light-primary`}
+                >
                   {Array.from({ length: 5 }).map((_, idx) => (
                     <Star
                       key={idx}
                       className={clsx(
                         "h-4 w-4",
                         idx < rating
-                          ? "fill-amber-300 text-amber-300"
+                          ? `item-fill text-light-primary`
                           : isDark
                           ? "text-slate-600"
                           : "text-slate-300"
@@ -209,8 +186,8 @@ export const FacebookReviews = ({
               className={clsx(
                 "rounded-full px-6",
                 isDark
-                  ? "bg-amber-400 text-slate-950 hover:bg-amber-300"
-                  : "bg-amber-400 text-slate-950 hover:bg-amber-300"
+                  ? `bg-primary text-slate-950 bg-primary:hover`
+                  : `bg-primary text-slate-950 bg-primary:hover`
               )}
             >
               <a href={ctaHref} target="_blank" rel="noopener noreferrer">

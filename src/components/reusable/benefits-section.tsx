@@ -13,11 +13,13 @@ type BenefitsSectionProps = {
   bgImage: string;
   bgAlt: string;
   badgeText: string;
-  title: [string, string];
+  title: [string, string] | string[];
   pointsTitle: string;
   points: string[];
   statsTitle: string;
   stats: Stat[];
+  base: string;
+  secondary: string;
 };
 
 export default function BenefitsSection({
@@ -29,9 +31,11 @@ export default function BenefitsSection({
   points,
   statsTitle,
   stats,
+  base,
+  secondary,
 }: BenefitsSectionProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-slate-950">
+    <section className={`relative isolate overflow-hidden bg-secondary-dark`}>
       {/* Image half */}
       <div className="absolute inset-0 -z-10 lg:right-auto lg:w-1/2">
         <Image
@@ -41,18 +45,22 @@ export default function BenefitsSection({
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/90 to-black/60 opacity-70" />
+        <div
+          className={`absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/90 to-black/60 opacity-70`}
+        />
       </div>
 
       <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-2">
         <div className="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-10 lg:py-48">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl space-y-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">
+            <div
+              className={`inline-flex items-center gap-2 rounded-full border pill-border bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-light-primary`}
+            >
               <span>{badgeText}</span>
             </div>
 
             <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              {title[0]} <span className="text-amber-400">{title[1]}</span>
+              {title[0]} <span className={`text-primary`}>{title[1]}</span>
             </h2>
 
             <div className="space-y-6">
@@ -60,7 +68,7 @@ export default function BenefitsSection({
               <ul className="space-y-4 text-slate-200">
                 {points.map((point) => (
                   <li key={point} className="flex gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 text-amber-400" />
+                    <CheckCircle2 className={`mt-0.5 h-5 w-5 text-primary`} />
                     <span>{point}</span>
                   </li>
                 ))}
@@ -87,9 +95,9 @@ export default function BenefitsSection({
             <Button
               asChild
               size="lg"
-              className="bg-amber-400 text-slate-950 hover:bg-amber-300"
+              className={`bg-primary text-slate-950 bg-primary:hover`}
             >
-              <Link href="/contact#contact">Book a Free Estimate</Link>
+              <Link href="#contact">Book a Free Estimate</Link>
             </Button>
           </div>
         </div>

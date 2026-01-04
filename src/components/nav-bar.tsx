@@ -14,11 +14,11 @@ import { Menu, Phone } from "lucide-react";
 
 export function NavBar() {
   return (
-    <header className="border-b bg-white/80 backdrop-blur">
+    <header className="border-b bg-none backdrop-blur">
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-5 lg:py-3">
         {/* Brand / Logo */}
         <Link
-          href="/"
+          href="#"
           className="text-lg font-semibold tracking-tight w-60 h-25 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
         >
           <img
@@ -30,14 +30,20 @@ export function NavBar() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-4 text-sm font-medium md:flex space-x-3">
           <Link
-            href="/"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            href="#"
+            className="text-foreground transition-colors hover:text-muted-foreground"
           >
             Home
           </Link>
           <Link
-            href="/contact"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            href="#"
+            className="text-foreground transition-colors hover:text-muted-foreground"
+          >
+            Services
+          </Link>
+          <Link
+            href="#"
+            className="text-foreground transition-colors hover:text-muted-foreground"
           >
             Contact
           </Link>
@@ -46,7 +52,7 @@ export function NavBar() {
             size="lg"
             className="bg-amber-400 text-amber-950 hover:bg-amber-300"
           >
-            <Link className="text-black" href="tel:0417696602">
+            <Link className="text-slate-950" href="tel:1300 000 000">
               <Phone className="h-4 w-4" />
               Call 0417 696 602
             </Link>
@@ -69,13 +75,19 @@ export function NavBar() {
 
               <div className="mt-6 flex flex-col gap-3 px-4">
                 <Link
-                  href="/"
+                  href="#"
                   className="text-sm font-medium text-muted-foreground hover:text-foreground"
                 >
                   Home
                 </Link>
                 <Link
-                  href="/contact"
+                  href="#"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground"
+                >
+                  Services
+                </Link>
+                <Link
+                  href="#"
                   className="text-sm font-medium text-muted-foreground hover:text-foreground"
                 >
                   Contact
@@ -85,9 +97,9 @@ export function NavBar() {
                   className="mt-2 bg-amber-400 text-amber-950 hover:bg-amber-300"
                   size="lg"
                 >
-                  <Link href="tel:0417696602">
+                  <Link href="tel:1300 000 000">
                     <Phone className="h-4 w-4" />
-                    Call 0417 696 602
+                    Call 1300 000 123
                   </Link>
                 </Button>
               </div>

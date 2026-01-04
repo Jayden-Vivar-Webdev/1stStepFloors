@@ -15,6 +15,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Calculator, Layers, Ruler, Waves } from "lucide-react";
+import content from "@/content/content.json";
 
 type FloorProductId = "laminate" | "engineered" | "hybrid" | "herringbone";
 type SubfloorId =
@@ -119,12 +120,16 @@ export function FloorCostCalculator() {
   const total = materialCost + installCost + selfLevelCost;
   const showNumbers = sqm > 0;
 
+  const { theme } = content;
+
   return (
     <section className="bg-white py-30" id="floor-calculator">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6">
         {/* Header styled like HowItWorks */}
         <div className="space-y-3">
-          <p className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+          <p
+            className={`inline-flex items-center gap-2 rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white`}
+          >
             Quote tool
           </p>
           <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
@@ -139,7 +144,9 @@ export function FloorCostCalculator() {
         <div className="grid gap-6 lg:grid-cols-3 items-start">
           {/* Inputs card */}
           <Card className="group relative overflow-hidden border border-slate-200/80 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(15,23,42,0.12)] lg:col-span-2">
-            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500 via-amber-500 to-amber-500" />
+            <div
+              className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r card-top-border`}
+            />
             <CardContent className="space-y-6 p-5">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-1">
@@ -150,7 +157,9 @@ export function FloorCostCalculator() {
                     Update any field to see the estimate change instantly.
                   </p>
                 </div>
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-40 text-amber-500 ring-1 ring-amber-200 transition group-hover:bg-amber-500 group-hover:text-white">
+                <div
+                  className={`flex h-10 w-10 items-center justify-center rounded-full process-card-icon`}
+                >
                   <Calculator size={18} strokeWidth={2} />
                 </div>
               </div>
@@ -162,7 +171,9 @@ export function FloorCostCalculator() {
                     value={floorId}
                     onValueChange={(v) => setFloorId(v as FloorProductId)}
                   >
-                    <SelectTrigger className="bg-white focus:ring-2 focus:ring-amber-400 h-10 w-full">
+                    <SelectTrigger
+                      className={`bg-white focus:ring-2 focus-primary h-10 w-full`}
+                    >
                       <SelectValue placeholder="Select a floor type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -188,7 +199,7 @@ export function FloorCostCalculator() {
                     placeholder="e.g. 24"
                     value={sqmRaw}
                     onChange={(e) => setSqmRaw(e.target.value)}
-                    className="bg-white focus-visible:ring-2 focus-visible:ring-amber-400 h-10 w-full"
+                    className={`bg-white focus-visible:ring-2 focus-visable-primary h-10 w-full`}
                   />
                   <p className="text-xs text-slate-600">
                     Tip: use the measured area (not the room size guess).
@@ -201,7 +212,9 @@ export function FloorCostCalculator() {
                     value={subfloorId}
                     onValueChange={(v) => setSubfloorId(v as SubfloorId)}
                   >
-                    <SelectTrigger className="bg-white focus:ring-2 focus:ring-amber-400 h-10 w-full">
+                    <SelectTrigger
+                      className={`bg-white focus:ring-2 focus-primary h-10 w-full`}
+                    >
                       <SelectValue placeholder="Select current floor" />
                     </SelectTrigger>
                     <SelectContent>
@@ -216,7 +229,9 @@ export function FloorCostCalculator() {
                   <div className="text-xs text-slate-600">
                     {selfLevelNeeded ? (
                       <span className="inline-flex items-center gap-2">
-                        <span className="inline-block h-2 w-2 rounded-full bg-amber-400" />
+                        <span
+                          className={`inline-block h-2 w-2 rounded-full bg-primary`}
+                        />
                         Self-levelling likely required
                       </span>
                     ) : (
@@ -236,7 +251,7 @@ export function FloorCostCalculator() {
             id="floor-calculator-summary"
             className="group relative overflow-hidden border border-slate-200/80 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(15,23,42,0.12)]"
           >
-            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500 via-amber-500 to-amber-500" />
+            <div className={`card-top-border`} />
             <CardContent className="space-y-5 p-5">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-1">
@@ -248,7 +263,9 @@ export function FloorCostCalculator() {
                   </p>
                 </div>
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-40 text-amber-500 ring-1 ring-amber-200 transition group-hover:bg-amber-500 group-hover:text-white">
+                <div
+                  className={`flex h-10 w-10 items-center justify-center rounded-full process-card-icon`}
+                >
                   <Layers size={18} strokeWidth={2} />
                 </div>
               </div>
@@ -312,10 +329,11 @@ function Row({
   value: React.ReactNode;
   icon?: React.ReactNode;
 }) {
+  const { theme } = content;
   return (
     <div className="flex items-center justify-between gap-3 rounded-lg border border-slate-200/80 bg-white px-3 py-2">
       <div className="flex min-w-0 items-center gap-2 text-sm text-slate-600">
-        <span className="text-amber-500">{icon}</span>
+        <span className={`text-primary-dark-500`}>{icon}</span>
         <span className="truncate">{label}</span>
       </div>
       <div className="text-sm font-semibold text-slate-900">{value}</div>
