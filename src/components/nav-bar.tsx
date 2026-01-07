@@ -18,7 +18,7 @@ export function NavBar() {
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-5 lg:py-3">
         {/* Brand / Logo */}
         <Link
-          href="#"
+          href="/"
           className="text-lg font-semibold tracking-tight w-60 h-25 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
         >
           <img
@@ -30,19 +30,19 @@ export function NavBar() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-4 text-sm font-medium md:flex space-x-3">
           <Link
-            href="#"
+            href="/"
             className="text-foreground transition-colors hover:text-muted-foreground"
           >
             Home
           </Link>
           <Link
-            href="#"
+            href="/services"
             className="text-foreground transition-colors hover:text-muted-foreground"
           >
             Services
           </Link>
           <Link
-            href="#"
+            href="/contact"
             className="text-foreground transition-colors hover:text-muted-foreground"
           >
             Contact
@@ -75,19 +75,19 @@ export function NavBar() {
 
               <div className="mt-6 flex flex-col gap-3 px-4">
                 <Link
-                  href="#"
+                  href="/"
                   className="text-sm font-medium text-muted-foreground hover:text-foreground"
                 >
                   Home
                 </Link>
                 <Link
-                  href="#"
+                  href="/services"
                   className="text-sm font-medium text-muted-foreground hover:text-foreground"
                 >
                   Services
                 </Link>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="text-sm font-medium text-muted-foreground hover:text-foreground"
                 >
                   Contact

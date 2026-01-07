@@ -28,9 +28,6 @@ type FlooringHeroProps = {
   formSubheadline: string;
   onLeadSubmit?: (data: LeadFormData) => void;
   className?: string;
-  primary: string;
-  secondary: string;
-  base: string;
 };
 
 export const FlooringHero = ({
@@ -50,8 +47,6 @@ export const FlooringHero = ({
   formSubheadline,
   onLeadSubmit,
   className,
-  primary,
-  base,
 }: FlooringHeroProps) => {
   const [formData, setFormData] = useState<LeadFormData>({
     name: "",

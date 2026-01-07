@@ -14,6 +14,10 @@ import { TradieHero } from "@/components/hero-services";
 import content from "@/content/content.json";
 import { ServicesSection } from "@/components/services";
 import { ProcessStepsSection } from "@/components/steps-service";
+import ServiceRight from "@/components/service-first";
+import ServiceSection from "@/components/service-alt";
+import ServiceCenterSection from "@/components/service-center";
+
 type Service = {
   title: string;
   summary: string;
@@ -129,37 +133,20 @@ export default function ServicesPage() {
         }}
       />
       <ServicesSection
-        title={pages.services.servicesSection.title}
-        subtitle={pages.services.servicesSection.subtitle}
-        services={pages.services.servicesSection.services}
+        title={pages.services.featuredServicesSection.title}
+        subtitle={pages.services.featuredServicesSection.subtitle}
+        services={pages.services.featuredServicesSection.services}
+      />
+      <ServiceRight
+        {...pages.services.sectionServices.firstService}
+        theme="dark"
+      />
+      <ServiceSection {...pages.services.sectionServices.secondService} />
+      <ServiceCenterSection
+        {...pages.services.sectionServices.thirdService}
+        theme="dark"
       />
       <ProcessStepsSection steps={pages.services.processStepsSection.steps} />
-      <section className="container mx-auto px-6 py-20">
-        <div className="rounded-2xl bg-slate-900 px-10 py-12 text-center text-white">
-          <p className="text-sm uppercase tracking-[0.2em] text-amber-300">
-            Ready to get started?
-          </p>
-          <h3 className="mt-4 text-3xl font-semibold">
-            Book trusted tradies today
-          </h3>
-          <p className="mt-2 text-slate-300">
-            Callouts across Melbourne metro with same-day emergency
-            availability.
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <Button asChild>
-              <a href="/contact">Get a fast quote</a>
-            </Button>
-            <Button
-              variant="secondary"
-              className="bg-white text-slate-900"
-              asChild
-            >
-              <a href="tel:1300123456">Call 1300 123 456</a>
-            </Button>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

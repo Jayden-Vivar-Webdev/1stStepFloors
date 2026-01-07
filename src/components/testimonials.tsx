@@ -22,8 +22,6 @@ type FacebookReviewsProps = {
   ctaHref?: string;
   className?: string;
   variant?: "dark" | "light" | string;
-  base: string;
-  secondary: string;
 };
 
 export const Reviews = ({
@@ -34,8 +32,6 @@ export const Reviews = ({
   ctaHref,
   className,
   variant = "dark",
-  base,
-  secondary,
 }: FacebookReviewsProps) => {
   const isDark = variant === "dark";
 

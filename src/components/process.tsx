@@ -11,7 +11,7 @@ import type { LucideIcon } from "lucide-react";
 const iconMap = LucideIcons;
 
 export function HowItWorks() {
-  const { theme, pages } = content;
+  const { pages } = content;
   return (
     <section className="bg-white py-30" id="how-it-works">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6">

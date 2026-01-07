@@ -21,8 +21,6 @@ type FlooringGalleryProps = {
   className?: string;
   backgroundImage?: string;
   backgroundAlt?: string;
-  base: string;
-  secondary: string;
 };
 
 export function FlooringGallery({
@@ -32,8 +30,6 @@ export function FlooringGallery({
   className,
   backgroundImage = "/images/herringbone-bg.png",
   backgroundAlt = "Decorative wood texture background",
-  base,
-  secondary,
 }: FlooringGalleryProps) {
   return (
     <section

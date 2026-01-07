@@ -18,8 +18,6 @@ type BenefitsSectionProps = {
   points: string[];
   statsTitle: string;
   stats: Stat[];
-  base: string;
-  secondary: string;
 };
 
 export default function BenefitsSection({
@@ -31,8 +29,6 @@ export default function BenefitsSection({
   points,
   statsTitle,
   stats,
-  base,
-  secondary,
 }: BenefitsSectionProps) {
   return (
     <section className={`relative isolate overflow-hidden bg-secondary-dark`}>

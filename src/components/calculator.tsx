@@ -120,8 +120,6 @@ export function FloorCostCalculator() {
   const total = materialCost + installCost + selfLevelCost;
   const showNumbers = sqm > 0;
 
-  const { theme } = content;
-
   return (
     <section className="bg-white py-30" id="floor-calculator">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6">
@@ -329,7 +327,6 @@ function Row({
   value: React.ReactNode;
   icon?: React.ReactNode;
 }) {
-  const { theme } = content;
   return (
     <div className="flex items-center justify-between gap-3 rounded-lg border border-slate-200/80 bg-white px-3 py-2">
       <div className="flex min-w-0 items-center gap-2 text-sm text-slate-600">

@@ -128,6 +128,10 @@
   .bg-primary {
     @apply bg-amber-400; /* default Tailwind color you want */
   }
+  .bg-primary-light {
+    @apply bg-[#ffba0047];
+  }
+
   .bg-secondary-dark {
     @apply bg-slate-950;
   }
@@ -158,12 +162,16 @@
   .border-primary {
     @apply border-amber-300/30;
   }
+  .border-dark {
+    @apply border-amber-500;
+  }
   .item-fill {
     @apply fill-amber-300;
   }
   .pill-border {
     @apply border-amber-300/30;
   }
+
   .card-top-border {
     @apply absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500 via-amber-500 to-amber-500;
   }

@@ -1,40 +1,40 @@
+"use client"; // <-- THIS IS CRUCIAL
+
+import { useRouter } from "next/navigation";
 import BenefitsHome from "@/components/benefits";
 import { FloorCostCalculator } from "@/components/calculator";
 import { ContactSection } from "@/components/contact-section";
 import { FlooringGallery } from "@/components/gallery";
 import { FlooringHero } from "@/components/hero-section";
 import { HowItWorks } from "@/components/process";
+import { ServicesSection } from "@/components/services";
 import { Reviews } from "@/components/testimonials";
 import content from "@/content/content.json";
 
 export default function Home() {
-  const { theme, pages } = content;
+  const router = useRouter();
+
+  function handleLeadSubmit(link: string) {
+    router.push(link);
+  }
+  const { pages } = content;
+
   return (
     <main className="min-h-screen">
       <FlooringHero
         {...pages.home["hero-home"]}
-        primary={theme["primary-color"]}
-        secondary={theme.secondary}
-        base={theme.baseColor}
+        onPrimaryClick={() => handleLeadSubmit("tel:1300")}
+        onSecondaryClick={() => handleLeadSubmit("contact")}
       />
       <Reviews
         {...pages.home["review-data"]} // spreads heading, subheading, reviews, ctaLabel, ctaHref
-        base={theme.baseColor}
-        secondary={theme.secondary}
       />
       <BenefitsHome />
       <HowItWorks />
-      <FlooringGallery
-        {...pages.home["flooring-gallery"]}
-        base={theme.baseColor}
-        secondary={theme.secondary}
-      />
-      <FloorCostCalculator />
-      <ContactSection
-        {...pages.home["contact-section"]}
-        base={theme.baseColor}
-        secondary={theme.secondary}
-      />
+      <FlooringGallery {...pages.home["flooring-gallery"]} />
+      {/* <FloorCostCalculator /> */}
+      <ServicesSection {...pages.services.featuredServicesSection} />
+      <ContactSection {...pages.home["contact-section"]} />
     </main>
   );
 }

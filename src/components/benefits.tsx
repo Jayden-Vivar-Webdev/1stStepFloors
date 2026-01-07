@@ -8,13 +8,7 @@ export const BenefitsSectionData = [
 ];
 
 export default function BenefitsHome() {
-  const { theme, pages } = content;
+  const { pages } = content;
 
-  return (
-    <BenefitsSection
-      {...pages.home["benefits-section"]}
-      base={theme.baseColor}
-      secondary={theme.secondary}
-    />
-  );
+  return <BenefitsSection {...pages.home["benefits-section"]} />;
 }

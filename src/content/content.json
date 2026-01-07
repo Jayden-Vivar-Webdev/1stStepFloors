@@ -1,11 +1,4 @@
 {
-  "theme": {
-    "primary-color": "amber-400",
-    "baseColor": "amber",
-    "secondary": "slate-950",
-    "background": "light",
-    "mode": "dark"
-  },
   "footer": {
     "brand": {
       "name": "1st Step Flooring",
@@ -53,7 +46,7 @@
         "headline": "Premium Flooring Solutions Perfectly Installed",
         "subheadline": "Transform your space with designer finishes, precise installation, and trust with every step.",
         "primaryCtaLabel": "Call Now",
-        "secondaryCtaLabel": "See Recent Projects",
+        "secondaryCtaLabel": "Email Us",
         "ctaHidden": false,
         "stats": [
           { "label": "Projects Completed", "value": "1,200+" },
@@ -238,8 +231,8 @@
           "href": "tel:1300123456"
         }
       },
-      "servicesSection": {
-        "title": "Our Services",
+      "featuredServicesSection": {
+        "title": "All Services",
         "subtitle": "Flexible services for residential, commercial, and industrial jobs.",
         "services": [
           {
@@ -279,6 +272,109 @@
             "imageAlt": "New flooring installation and upgrade"
           }
         ]
+      },
+      "sectionServices": {
+        "firstService": {
+          "id": "timber-flooring",
+          "badge": "Expert Flooring Solutions",
+          "heading": "Timber Flooring Services",
+          "description": "We provide high-quality timber flooring solutions tailored to your home or business. From selection to installation, our team ensures a flawless finish with long-lasting results.",
+          "imageSrc": "/images/flooring-types/laminate.jpg",
+          "imageAlt": "Beautiful timber floor installation",
+          "features": [
+            {
+              "title": "Flooring Selection",
+              "description": "Expert guidance to choose the perfect timber type, finish, and style for your space."
+            },
+            {
+              "title": "Professional Installation",
+              "description": "Skilled installation for a flawless, durable timber floor that enhances any room."
+            },
+            {
+              "title": "Maintenance & Care",
+              "description": "Advice and services to keep your timber flooring looking pristine for years to come."
+            }
+          ],
+          "deliveryTitle": "Our Services",
+          "deliveryOptions": [
+            {
+              "title": "On-Site Consultation",
+              "description": "Our flooring experts visit your location to measure, advise, and recommend the best timber options."
+            },
+            {
+              "title": "Installation Service",
+              "description": "Professional installation ensuring precision, efficiency, and a beautiful end result."
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaHref": "/contact"
+        },
+        "secondService": {
+          "id": "extinguisher-services",
+          "badge": "Fire Equipment",
+          "heading": "Extinguisher & Fire Equipment Services",
+          "description": "Regular maintenance and testing of your fire equipment is not just a legal requirement – it’s critical for workplace safety.",
+          "leftBlock": {
+            "title": "Our Services Include:",
+            "items": [
+              { "text": "Fire extinguisher testing & replacement" },
+              { "text": "Fire blanket inspections" },
+              { "text": "Fire hose reel servicing" },
+              { "text": "Smoke alarm testing" }
+            ]
+          },
+          "rightBlock": {
+            "title": "Compliance Requirements:",
+            "items": [
+              { "text": "6 monthly extinguisher checks" },
+              { "text": "Fire signage checks" },
+              { "text": "Site safety inspections" },
+              { "text": "Detailed service records" }
+            ]
+          },
+          "noteTitle": "Important Note",
+          "noteText": "Under Australian Standard AS1851, all fire protection equipment must be regularly tested and maintained. Failure to comply can result in fines and void insurance coverage.",
+          "ctaText": "Schedule Equipment Service",
+          "ctaHref": "/contact",
+          "imageSrc": "/images/flooring-types/herringbone.JPG",
+          "imageAlt": "Fire extinguisher maintenance"
+        },
+
+        "thirdService": {
+          "id": "flooring-solutions",
+          "badge": "Premium Flooring",
+          "heading": "Timber Flooring Solutions & Showcase",
+          "description": "Explore our high-quality timber flooring options, perfectly crafted for homes and businesses. From elegant designs to durable finishes, we provide tailored solutions for every space.",
+          "imageSrc": "/images/flooring-types/herringbone.JPG",
+          "imageAlt": "Beautiful herringbone timber floor example",
+          "imageCaption": "Sample of Herringbone Timber Flooring",
+          "cards": [
+            {
+              "title": "Flooring Options",
+              "description": "A wide range of timber types and finishes to suit any interior design and style preference.",
+              "icon": "file-lines",
+              "features": [
+                { "text": "Oak, Walnut, and Maple options" },
+                { "text": "Matte, satin, and glossy finishes" },
+                { "text": "Custom sizing and patterns" },
+                { "text": "Eco-friendly and sustainable timber" }
+              ]
+            },
+            {
+              "title": "Installation Services",
+              "description": "Professional installation to ensure your timber floors look stunning and last for years to come.",
+              "icon": "map-location-dot",
+              "features": [
+                { "text": "Expert on-site installation" },
+                { "text": "Precision pattern layouts" },
+                { "text": "Floor leveling and preparation" },
+                { "text": "Finishing and protective coatings" }
+              ]
+            }
+          ],
+          "ctaText": "Request Your Flooring Consultation",
+          "ctaHref": "/contact"
+        }
       },
       "processStepsSection": {
         "steps": [

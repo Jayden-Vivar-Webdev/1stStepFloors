@@ -27,8 +27,6 @@ type ContactSectionProps = {
   formSubheadline: string;
   onLeadSubmit?: (data: LeadFormData) => void;
   className?: string;
-  base: string;
-  secondary: string;
 };
 
 export const ContactSection = ({
@@ -47,8 +45,6 @@ export const ContactSection = ({
   formSubheadline,
   onLeadSubmit,
   className,
-  base,
-  secondary,
 }: ContactSectionProps) => {
   const [formData, setFormData] = useState<LeadFormData>({
     name: "",
@@ -75,7 +71,7 @@ export const ContactSection = ({
   return (
     <section
       className={clsx(
-        `relative overflow-hidden bg-${secondary} text-white`,
+        `relative overflow-hidden bg-slate-950 text-white`,
         className
       )}
       id="contact-bottom"
@@ -90,7 +86,7 @@ export const ContactSection = ({
           className="object-cover object-[center_20%] md:object-center"
         />
         <div
-          className={`absolute inset-0 bg-gradient-to-br from-${secondary} via-slate-900 to-[#050505]/90 opacity-80`}
+          className={`absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-[#050505]/90 opacity-80`}
         />
       </div>
 

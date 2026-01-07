@@ -4,14 +4,10 @@ import { FlooringHero } from "@/components/hero-section";
 import content from "@/content/content.json";
 
 export default function ContactPage() {
-  const { theme, pages } = content;
+  const { pages } = content;
   return (
     <>
-      <ContactSection
-        {...pages.home["contact-section"]}
-        base={theme.baseColor}
-        secondary={theme.secondary}
-      />
+      <ContactSection {...pages.home["contact-section"]} />
     </>
   );
 }
