@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const defaultTitle =
-  "1st Step Flooring | Premium Flooring Installations Across Melbourne";
+  "1st Step Flooring | Premium Flooring Installations Across Sydney";
 const defaultDescription =
-  "Hybrid timber, laminate, and herringbone flooring expertly installed with dust-free finishes, transparent pricing, and fast callouts across Melbourne.";
+  "Hybrid timber, laminate, and herringbone flooring expertly installed with dust-free finishes, transparent pricing, and fast callouts across Sydney.";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
   authors: [{ name: "1st Step Flooring" }],
   creator: "1st Step Flooring",
   keywords: [
-    "flooring installation Melbourne",
+    "flooring installation Sydney",
     "hybrid timber flooring",
     "laminate flooring",
     "herringbone flooring",
     "commercial flooring contractors",
-    "flooring quote Melbourne",
+    "flooring quote Sydney",
     "1st Step Flooring",
   ],
   category: "business",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "1st Step Flooring",
     images: [
       {
-        url: "/images/flooring-types/herringbone.JPG",
+        url: "/images/site-og.png",
         width: 1200,
         height: 630,
         alt: "Premium flooring installation by 1st Step Flooring",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultTitle,
     description: defaultDescription,
-    images: ["/images/flooring-types/herringbone.JPG"],
+    images: ["/images/site-og.png"],
   },
   robots: {
     index: true,

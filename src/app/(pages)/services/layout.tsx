@@ -4,13 +4,13 @@ import type { ReactNode } from "react";
 const servicesTitle =
   "Services | Reliable Trades & Maintenance | 1st Step Flooring";
 const servicesDescription =
-  "Emergency repairs, scheduled maintenance, and installation upgrades with licensed tradies, transparent pricing, and fast response across Melbourne.";
+  "Emergency repairs, scheduled maintenance, and installation upgrades with licensed tradies, transparent pricing, and fast response across Sydney.";
 
 export const metadata: Metadata = {
   title: servicesTitle,
   description: servicesDescription,
   keywords: [
-    "emergency repairs Melbourne",
+    "emergency repairs Sydney",
     "maintenance services",
     "installation upgrades",
     "licensed tradies",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/flooring-types/hybrid-flooring.JPG",
+        url: "/images/site-og.png",
         width: 1200,
         height: 630,
         alt: "Flooring specialists providing maintenance and installation services",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: servicesTitle,
     description: servicesDescription,
-    images: ["/images/flooring-types/hybrid-flooring.JPG"],
+    images: ["/images/site-og.png"],
   },
   alternates: {
     canonical: "/services",

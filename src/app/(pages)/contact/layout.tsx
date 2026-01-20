@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 const contactTitle =
-  "Contact | Get a Flooring Quote in Melbourne | 1st Step Flooring";
+  "Contact | Get a Flooring Quote in Sydney | 1st Step Flooring";
 const contactDescription =
-  "Talk with 1st Step Flooring for fast quotes, site visits, and dust-free flooring installations across Melbourne.";
+  "Talk with 1st Step Flooring for fast quotes, site visits, and dust-free flooring installations across Sydney.";
 
 export const metadata: Metadata = {
   title: contactTitle,
   description: contactDescription,
   keywords: [
     "contact 1st Step Flooring",
-    "flooring quote Melbourne",
+    "flooring quote Sydney",
     "flooring installer near me",
-    "book site visit",
+    "Book site visit",
     "flooring contractor contact",
   ],
   openGraph: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/flooring-types/herringbone.JPG",
+        url: "/images/site-og.png",
         width: 1200,
         height: 630,
         alt: "Flooring consultation and quote with 1st Step Flooring",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: contactTitle,
     description: contactDescription,
-    images: ["/images/flooring-types/herringbone.JPG"],
+    images: ["/images/site-og.png"],
   },
   alternates: {
     canonical: "/contact",
