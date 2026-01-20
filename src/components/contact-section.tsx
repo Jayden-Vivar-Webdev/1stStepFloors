@@ -228,7 +228,7 @@ export const ContactSection = ({
               ))}
             </div>
             <div className="text-sm text-slate-200">
-              Trusted by 300+ builders & designers across the metro area.
+              Trusted by multiple builders & designers across Sydney.
             </div>
           </div>
         </div>

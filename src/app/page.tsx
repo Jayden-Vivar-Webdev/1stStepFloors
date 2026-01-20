@@ -23,7 +23,7 @@ export default function Home() {
     <main className="min-h-screen">
       <FlooringHero
         {...pages.home["hero-home"]}
-        onPrimaryClick={() => handleLeadSubmit("tel:1300")}
+        onPrimaryClick={() => handleLeadSubmit("tel:0417696602")}
         onSecondaryClick={() => handleLeadSubmit("contact")}
       />
       <Reviews

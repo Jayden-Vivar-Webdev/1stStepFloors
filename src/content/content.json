@@ -6,7 +6,7 @@
       "logoHref": "/"
     },
     "socials": [
-      { "icon": "Facebook", "href": "https://twitter.com/yourhandle" },
+      { "icon": "Facebook", "href": "" },
       { "icon": "Instagram", "href": "https://github.com/yourhandle" }
     ],
     "sections": [
@@ -50,13 +50,13 @@
         "ctaHidden": false,
         "stats": [
           { "label": "Projects Completed", "value": "1,200+" },
-          { "label": "Avg. Project Rating", "value": "4.9/5" },
+          { "label": "Avg. Project Rating", "value": "5/5" },
           { "label": "Years in The Business", "value": "15" }
         ],
         "desktopSrc": "/images/shirt-logo.webp",
         "mobileSrc": "/images/featured-img.webp",
         "backgroundAlt": "Luxury flooring installation in progress",
-        "phoneNumber": "1300 176 262",
+        "phoneNumber": "0417696602",
         "formHeadline": "Get My Flooring Quote",
         "formSubheadline": "Share your info and we’ll confirm a site visit within 24 hours."
       },
@@ -87,7 +87,7 @@
           }
         ],
         "ctaLabel": "Read more on Facebook",
-        "ctaHref": "https://facebook.com",
+        "ctaHref": "https://www.facebook.com/share/1AiQRtSRpm/?mibextid=wwXIfr",
         "variant": "light"
       },
       "benefits-section": {
@@ -97,24 +97,24 @@
         "title": ["Premium", "Benefits"],
         "pointsTitle": "Experience the Difference",
         "points": [
-          "Dust-free installation",
-          "On-time project schedules",
-          "High-quality materials and finishes",
+          "Honest Advice and Quoting",
+          "On time project schedules",
+          "High quality materials and finishes",
           "Professional and friendly team",
           "Satisfaction guaranteed"
         ],
         "statsTitle": "Our Track Record",
         "stats": [
-          { "title": "Projects Completed", "stat": "1,200+" },
-          { "title": "Avg. Project Rating", "stat": "4.9/5" },
+          { "title": "Satisfied Customers", "stat": "100%" },
+          { "title": "Avg. Project Rating", "stat": "5/5" },
           { "title": "Years in Business", "stat": "15" },
-          { "title": "Trusted Builders & Designers", "stat": "300+" }
+          { "title": "On Time", "stat": "100%" }
         ]
       },
       "how-it-works": {
         "badgeText": "Process",
         "headline": "How our flooring installation works",
-        "subheadline": "A transparent four-step workflow built to minimize downtime and keep every detail on schedule.",
+        "subheadline": "A transparent four step workflow built to minimize downtime and keep every detail on schedule.",
         "steps": [
           {
             "title": "Book your estimate",
@@ -133,7 +133,7 @@
           },
           {
             "title": "Expert installation",
-            "desc": "Certified installers complete the job dust-free, on schedule, and walk you through care tips.",
+            "desc": "Once the quote is accepted and invoice is paid our certified installers complete the job, on time with care",
             "icon": "Hammer"
           }
         ],
@@ -152,44 +152,44 @@
         "backgroundAlt": "Decorative wood texture background",
         "items": [
           {
-            "name": "Engineered Hardwood",
-            "subtitle": "White Oak · Chevron · Matte Finish",
-            "description": "Sustainably sourced planks with precision-milled tongues for seamless installs.",
+            "name": "Hybrid Vinyl Planks",
+            "subtitle": "SPC · Standard Flooring ",
+            "description": "Stone plastic composite flooring, a dense rigid core made from ground stone.",
             "image": "/images/flooring-types/hybrid-flooring.JPG",
-            "imageAlt": "Engineered hardwood flooring in modern living room"
+            "imageAlt": "Hybrid Vinyl Planks"
           },
           {
-            "name": "Luxury Vinyl Plank (LVP)",
-            "subtitle": "Waterproof · Pet-friendly",
-            "description": "High-definition textures and aluminum-oxide wear layers for busy households.",
+            "name": "Engineered Flooring",
+            "subtitle": "Real Timber · Hard Wood Top",
+            "description": "Engineered timber flooring is a real wood floor made from multiple bonded layers.",
             "image": "/images/flooring-types/cross-ref.JPG",
-            "imageAlt": "Luxury vinyl plank flooring kitchen"
+            "imageAlt": "Engineered Flooring"
           },
           {
-            "name": "Large-Format Tile",
-            "subtitle": "Porcelain · Oversized slabs",
-            "description": "Laser-leveled substrates and feather-finish skim coats keep grout lines crisp.",
+            "name": "Hybrid Herringbone",
+            "subtitle": "Luxury Style Flooring",
+            "description": "Herringbone Hybrid Flooring give you the luxury look of real timber flooring in a classic design with durability.",
             "image": "/images/flooring-types/herringbone.JPG",
-            "imageAlt": "Large-format tile bathroom floor"
+            "imageAlt": "Herringbone Flooring - Luxury style"
           },
           {
-            "name": "Herringbone & Inlays",
-            "subtitle": "Custom patterns · Border details",
-            "description": "We template every cut to deliver perfect reveals on premium layouts.",
+            "name": "Spotted Gum Hybrid",
+            "subtitle": "Wide Plank · 7mm",
+            "description": "Realistic design made for a professional simplistic look.",
             "image": "/images/flooring-types/laminate.JPG",
-            "imageAlt": "Herringbone flooring detail"
+            "imageAlt": "Spotted Gum Hybrid flooring detail"
           },
           {
-            "name": "Stairs & Transitions",
-            "subtitle": "Nosing · Wrapped treads",
-            "description": "Seamless transitions between rooms and staircases with color-matched trims.",
+            "name": "Laminate",
+            "subtitle": "Luxury Laminate · 12mm",
+            "description": "Blackbutt laminate flooring, for a clean professional look.",
             "image": "/images/flooring-types/simple.JPG",
             "imageAlt": "Wood stairs matching flooring"
           },
           {
-            "name": "Commercial Spec Flooring",
-            "subtitle": "Retail · Offices · Hospitality",
-            "description": "Durable finishes engineered for ADA compliance, high traffic, and easy maintenance.",
+            "name": "Laminate Flooring",
+            "subtitle": "Durable · 12mm · Laminate",
+            "description": "Durable finishes engineered for everyday living and affordability.",
             "image": "/images/flooring-types/staircase-flooring.JPG",
             "imageAlt": "Commercial flooring in retail space"
           }
@@ -204,7 +204,7 @@
         "desktopSrc": "/images/flooring-types/herringbone.JPG",
         "mobileSrc": "/images/flooring-types/herringbone.JPG",
         "backgroundAlt": "Luxury flooring installation in progress",
-        "phoneNumber": "1300 176 262",
+        "phoneNumber": "0417696602",
         "formHeadline": "Get My Flooring Quote",
         "formSubheadline": "Share your info and we’ll confirm a site visit within 24 hours.",
         "stats": [
@@ -219,16 +219,16 @@
       "hero": {
         "image": "/images/flooring-types/hybrid-flooring.JPG",
         "alt": "Flooring",
-        "eyebrow": "Trusted local tradies",
-        "headline": "Reliable trades & maintenance done right",
-        "description": "From urgent call-outs to scheduled upkeep, we deliver quality workmanship, transparent pricing, and friendly service.",
+        "eyebrow": "Trusted by locals",
+        "headline": "Reliable flooring done right",
+        "description": "From upgrades, new home installations and repairs, we do it all.",
         "primaryCta": {
           "label": "Book a site visit",
           "href": "/contact"
         },
         "secondaryCta": {
-          "label": "Call 1300 123 456",
-          "href": "tel:1300123456"
+          "label": "Call 0417 696 602",
+          "href": "tel:0417696602"
         }
       },
       "featuredServicesSection": {
@@ -236,38 +236,38 @@
         "subtitle": "Flexible services for residential, commercial, and industrial jobs.",
         "services": [
           {
-            "title": "Emergency repairs",
-            "summary": "24/7 response for electrical, plumbing, and structural issues.",
+            "title": "Flooring Repairs",
+            "summary": "Removal of old flooring. We replace and install top quality flooring for your home.",
             "features": [
-              "Rapid dispatch",
-              "Licensed experts",
-              "Upfront pricing"
+              "Rapid response",
+              "Flooring renovation experts",
+              "Same day quotation"
             ],
-            "ctaLabel": "Request emergency help",
+            "ctaLabel": "Request a Repair",
             "image": "/images/flooring-types/cross-ref.JPG",
             "imageAlt": "Technician performing an emergency flooring repair"
           },
           {
-            "title": "Scheduled maintenance",
-            "summary": "Preventive checks that keep your assets safe and compliant.",
+            "title": "New Build Flooring",
+            "summary": "Schedule your flooring for your new build. We professionally install and communicate with your builders.",
             "features": [
-              "Custom maintenance plans",
-              "Detailed reporting",
-              "Flexible hours"
+              "Effortless installation",
+              "Professional finishes",
+              "Compliance with builders"
             ],
-            "ctaLabel": "Plan maintenance",
+            "ctaLabel": "Plan Your Flooring",
             "image": "/images/flooring-types/laminate.JPG",
             "imageAlt": "Team handling scheduled flooring maintenance"
           },
           {
-            "title": "Installations & upgrades",
-            "summary": "Modern upgrades for residential, commercial, and industrial sites.",
+            "title": "Renovations & upgrades",
+            "summary": "We install and upgrade your flooring, wether you have tiles or carpet there is no job we can't do.",
             "features": [
-              "Full project management",
-              "Quality materials",
+              "Fast installation",
+              "Compliant with manufactures warrant",
               "Safety assured"
             ],
-            "ctaLabel": "Start a project",
+            "ctaLabel": "Start a Project",
             "image": "/images/flooring-types/hybrid-flooring.JPG",
             "imageAlt": "New flooring installation and upgrade"
           }
@@ -278,7 +278,7 @@
           "id": "timber-flooring",
           "badge": "Expert Flooring Solutions",
           "heading": "Timber Flooring Services",
-          "description": "We provide high-quality timber flooring solutions tailored to your home or business. From selection to installation, our team ensures a flawless finish with long-lasting results.",
+          "description": "We provide high quality timber flooring solutions tailored to your home or business. From selection to installation, our team ensures a flawless finish with long lasting results.",
           "imageSrc": "/images/flooring-types/laminate.jpg",
           "imageAlt": "Beautiful timber floor installation",
           "features": [
@@ -310,41 +310,40 @@
           "ctaHref": "/contact"
         },
         "secondService": {
-          "id": "extinguisher-services",
-          "badge": "Fire Equipment",
-          "heading": "Extinguisher & Fire Equipment Services",
-          "description": "Regular maintenance and testing of your fire equipment is not just a legal requirement – it’s critical for workplace safety.",
+          "id": "new-builds",
+          "badge": "New Build Installation",
+          "heading": "New Build Flooring",
+          "description": "Schedule your flooring for your new build. We professionally install and communicate with your builders.",
           "leftBlock": {
             "title": "Our Services Include:",
             "items": [
-              { "text": "Fire extinguisher testing & replacement" },
-              { "text": "Fire blanket inspections" },
-              { "text": "Fire hose reel servicing" },
-              { "text": "Smoke alarm testing" }
+              { "text": "Advice for selection" },
+              { "text": "Perfect preparation" },
+              { "text": "Expert installation" },
+              { "text": "Tips for care" }
             ]
           },
           "rightBlock": {
-            "title": "Compliance Requirements:",
+            "title": "Compliance Services:",
             "items": [
-              { "text": "6 monthly extinguisher checks" },
-              { "text": "Fire signage checks" },
-              { "text": "Site safety inspections" },
-              { "text": "Detailed service records" }
+              { "text": "Compliance for manufacture warrant" },
+              { "text": "Setup and installation care" },
+              { "text": "Site clean up" }
             ]
           },
           "noteTitle": "Important Note",
-          "noteText": "Under Australian Standard AS1851, all fire protection equipment must be regularly tested and maintained. Failure to comply can result in fines and void insurance coverage.",
+          "noteText": "All jobs are compliance with the builders regulation and requirements, we follow manufature compliance requiremetns to ensure you keep your warranty",
           "ctaText": "Schedule Equipment Service",
           "ctaHref": "/contact",
           "imageSrc": "/images/flooring-types/herringbone.JPG",
-          "imageAlt": "Fire extinguisher maintenance"
+          "imageAlt": "Compliant flooring"
         },
 
         "thirdService": {
           "id": "flooring-solutions",
           "badge": "Premium Flooring",
-          "heading": "Timber Flooring Solutions & Showcase",
-          "description": "Explore our high-quality timber flooring options, perfectly crafted for homes and businesses. From elegant designs to durable finishes, we provide tailored solutions for every space.",
+          "heading": "Renovations & upgrades",
+          "description": "We install and upgrade your flooring, wether you have tiles or carpet there is no job we can't do.",
           "imageSrc": "/images/flooring-types/herringbone.JPG",
           "imageAlt": "Beautiful herringbone timber floor example",
           "imageCaption": "Sample of Herringbone Timber Flooring",
@@ -379,19 +378,19 @@
       "processStepsSection": {
         "steps": [
           {
-            "step": "01",
-            "title": "Obligation-free quote",
-            "description": "Share your job details, photos, or plans for a same-day estimate."
+            "step": "1",
+            "title": "Obligation free quote",
+            "description": "We come out and quote your job with same day quote delievery"
           },
           {
-            "step": "02",
-            "title": "On-site assessment",
-            "description": "We inspect, confirm scope, and finalise timeline before starting."
+            "step": "2",
+            "title": "Expert Installation",
+            "description": "We perfectly install and follow compliance guidlines to ensure a professional service."
           },
           {
-            "step": "03",
-            "title": "Workmanship guarantee",
-            "description": "Certified tradies complete the job with full clean-up and warranty."
+            "step": "3",
+            "title": "Advice & Care",
+            "description": "Advice and care for your flooring to keep it lasting years to come."
           }
         ]
       }

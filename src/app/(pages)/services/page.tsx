@@ -43,8 +43,8 @@ const heroData = {
     href: "/contact",
   },
   secondaryCta: {
-    label: "Call 1300 123 456",
-    href: "tel:1300123456",
+    label: "Call 0417 696 602",
+    href: "tel:0417696602",
   },
 };
 
@@ -132,19 +132,19 @@ export default function ServicesPage() {
           href: pages.services.hero.secondaryCta.href,
         }}
       />
-      <ServicesSection
+      {/* <ServicesSection
         title={pages.services.featuredServicesSection.title}
         subtitle={pages.services.featuredServicesSection.subtitle}
         services={pages.services.featuredServicesSection.services}
-      />
+      /> */}
       <ServiceRight
         {...pages.services.sectionServices.firstService}
-        theme="dark"
+        theme="light"
       />
       <ServiceSection {...pages.services.sectionServices.secondService} />
       <ServiceCenterSection
         {...pages.services.sectionServices.thirdService}
-        theme="dark"
+        theme="light"
       />
       <ProcessStepsSection steps={pages.services.processStepsSection.steps} />
     </main>
