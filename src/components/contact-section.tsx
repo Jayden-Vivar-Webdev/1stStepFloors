@@ -25,7 +25,7 @@ type ContactSectionProps = {
   phoneNumber: string;
   formHeadline: string;
   formSubheadline: string;
-  onLeadSubmit?: (data: LeadFormData) => void;
+  onLeadSubmit: (data: LeadFormData) => boolean | Promise<boolean>;
   className?: string;
 };
 
@@ -52,13 +52,22 @@ export const ContactSection = ({
     phone: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-    onLeadSubmit?.(formData);
-    setTimeout(() => setIsSubmitting(false), 400);
+    try{
+      const success = await onLeadSubmit?.(formData);
+      if (!success) setError(true);
+    }catch(error){
+      console.error("Error in submission:", error);
+    }finally {
+      setIsSubmitting(false);
+    }
+    
   };
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -108,7 +117,7 @@ export const ContactSection = ({
             </h1>
             <p className="max-w-2xl text-lg text-slate-200">{subheadline}</p>
           </div>
-
+          {error && <p>An Error has occured submitting your form please ensure all fields are filled out correctly and try again.</p>}
           {!ctaHidden && (
             <div className="flex flex-wrap gap-3">
               <Button

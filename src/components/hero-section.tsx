@@ -8,8 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Phone, Star } from "lucide-react";
 import clsx from "clsx";
 
+
 type Stat = { label: string; value: string };
-type LeadFormData = { name: string; email: string; phone: string };
+export type LeadFormData = { name: string; email: string; phone: string };
 
 type FlooringHeroProps = {
   headline: string;
@@ -26,7 +27,7 @@ type FlooringHeroProps = {
   phoneNumber: string;
   formHeadline: string;
   formSubheadline: string;
-  onLeadSubmit?: (data: LeadFormData) => void;
+  onLeadSubmit: (data: LeadFormData) => boolean | Promise<boolean>;
   className?: string;
 };
 
@@ -55,12 +56,22 @@ export const FlooringHero = ({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async(event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-    onLeadSubmit?.(formData);
-    setTimeout(() => setIsSubmitting(false), 400);
+    try{
+      const success = await onLeadSubmit?.(formData);
+      if (!success) setError(true);
+    }catch(error){
+      console.error("Error in submission:", error);
+    }finally {
+      setIsSubmitting(false);
+    }
+    
   };
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -107,6 +118,8 @@ export const FlooringHero = ({
             </h1>
             <p className="max-w-2xl text-lg text-slate-200">{subheadline}</p>
           </div>
+
+          {error && <p>Error your contact form did not send please make sure all fields are filled out and try again. </p>}
 
           {!ctaHidden && (
             <div className="flex flex-wrap gap-3">
